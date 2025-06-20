@@ -1,0 +1,28 @@
+language: python
+python:
+  - "3.6"
+  - "3.7"
+  - "3.8"
+  - "3.9"
+  - "3.10"
+  - "3.11"
+  - "3.12"
+  - "3.13"
+
+before_install:
+  - sudo apt-get install astyle
+
+install:
+  - pip install -r requirements.txt
+  - pip install -r tests/requirements.txt
+  
+script:
+  - python -m pytest --cov=keras2c/
+
+after_success:
+  - mv include/*.gc* ./
+  - gcov *.gcda
+  - rm test__*{.gcov,.gcda,.gcno}
+  - codecov
+
+notifications:
