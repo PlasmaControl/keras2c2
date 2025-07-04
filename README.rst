@@ -7,7 +7,7 @@ keras2c2
 |License| |DOI|
 
 
-keras2c2 is an update to keras2c that supports Python 3.9 to 3.12, on Linux, MacOS, and Windows. It adds addtional features.
+keras2c2 is a temporary update to keras2c that supports Python 3.9 to 3.12, on Linux, MacOS, and Windows. It adds addtional features.
 
 keras2c is a library for deploying keras neural networks in C99, using only standard libraries.
 It is designed to be as simple as possible for real time applications.
